@@ -57,10 +57,11 @@ Transmission.fmt = (function()
 		 *   Format a percentage to a string
 		 */
 		percentString: function(x) {
-			if (x < 10.0)
+			// if (x < 10.0)
+			// 	return x.toTruncFixed(2);
+			// else if (x < 100.0)
+			if (x < 100.0)
 				return x.toTruncFixed(2);
-			else if (x < 100.0)
-				return x.toTruncFixed(1);
 			else
 				return x.toTruncFixed(0);
 		},
@@ -111,8 +112,9 @@ Transmission.fmt = (function()
 			}
 
 			// try to have at least 3 digits and at least 1 decimal
-			return convertedSize <= 9.995 ? [ convertedSize.toTruncFixed(2), unit ].join(' ')
-			                              : [ convertedSize.toTruncFixed(1), unit ].join(' ');
+			// return convertedSize <= 9.995 ? [ convertedSize.toTruncFixed(2), unit ].join(' ')
+			//                               : [ convertedSize.toTruncFixed(1), unit ].join(' ');
+		    return [ convertedSize.toTruncFixed(2), unit ].join(' ');
 		},
 
 		/**
@@ -150,8 +152,9 @@ Transmission.fmt = (function()
 			}
 
 			// try to have at least 3 digits and at least 1 decimal
-			return convertedSize <= 9.995 ? [ convertedSize.toTruncFixed(2), unit ].join(' ')
-			                              : [ convertedSize.toTruncFixed(1), unit ].join(' ');
+			// return convertedSize <= 9.995 ? [ convertedSize.toTruncFixed(2), unit ].join(' ')
+			//                               : [ convertedSize.toTruncFixed(1), unit ].join(' ');
+			return [ convertedSize.toTruncFixed(2), unit ].join(' ');
 		},
 
 		speedBps: function(Bps)
@@ -243,14 +246,14 @@ Transmission.fmt = (function()
 			}
 
 			var hours = myDate.getHours();
-			var period = "AM";
-			if (hours > 12){
-				hours = hours - 12;
-				period = "PM";
-			}
-			if (hours === 0){
-				hours = 12;
-			}
+			// var period = "AM";
+			// if (hours > 12){
+			// 	hours = hours - 12;
+			// 	period = "PM";
+			// }
+			// if (hours === 0){
+			// 	hours = 12;
+			// }
 			if (hours < 10){
 				hours = "0" + hours;
 			}
@@ -265,7 +268,7 @@ Transmission.fmt = (function()
 
 			time = [hours, minutes, seconds].join(':');
 
-			return [date, time, period].join(' ');
+			return [date, time/*, period*/].join(' ');
 		},
 
 		ngettext: function(msgid, msgid_plural, n)
