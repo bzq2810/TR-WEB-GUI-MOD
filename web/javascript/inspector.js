@@ -621,7 +621,7 @@ function Inspector(controller) {
 				                                    : '<div>'), '</div>', '</td>',
 				          '<td>', (peer.rateToPeer ? fmt.speedBps(peer.rateToPeer) : ''), '</td>',
 				          '<td>', (peer.rateToClient ? fmt.speedBps(peer.rateToClient) : ''), '</td>',
-				          '<td class="percentCol">', fmt.percentString(peer.progress), '%', '</td>',
+				          '<td class="percentCol">', fmt.percentString(peer.progress * 100), '%', '</td>',
 				          '<td class="statusCol">', fmt.peerStatus(peer.flagStr), '</td>',
 				          '<td class="addressCol">', sanitizeText(peer.address), '</td>',
 				          '<td class="clientCol">', (isMobileDevice ? ((peer.isEncrypted ? '<div class="encrypted-peer-cell clientCol">' : '<div class="clientCol">') + sanitizeText(peer.clientName) + '</div>') : sanitizeText(peer.clientName)), '</td>',
