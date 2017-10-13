@@ -619,8 +619,8 @@ function Inspector(controller) {
 				html.push('<tr class="inspector_peer_entry ', parity, '">',
 				          '<td class="encryptedCol">', (peer.isEncrypted ? '<div class="encrypted-peer-cell" title="Encrypted Connection">'
 				                                    : '<div>'), '</div>', '</td>',
-				          '<td>', (peer.rateToPeer ? fmt.speedBps(peer.rateToPeer) : ''), '</td>',
-				          '<td>', (peer.rateToClient ? fmt.speedBps(peer.rateToClient) : ''), '</td>',
+				          '<td style="text-align: right">', (peer.rateToPeer ? fmt.speedBps(peer.rateToPeer) : ''), '</td>',
+				          '<td style="text-align: right">', (peer.rateToClient ? fmt.speedBps(peer.rateToClient) : ''), '</td>',
 				          '<td class="percentCol">', fmt.percentString(peer.progress * 100), '%', '</td>',
 				          '<td class="statusCol">', fmt.peerStatus(peer.flagStr), '</td>',
 				          '<td class="addressCol">', sanitizeText(peer.address), '</td>',

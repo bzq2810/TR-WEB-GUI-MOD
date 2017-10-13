@@ -635,9 +635,11 @@ table.peer_list {
   table.peer_list .encryptedCol {
     width: 16px; }
   table.peer_list .upCol {
-    width: 60px; }
+    width: 60px;
+    text-align: center; }
   table.peer_list .downCol {
-    width: 60px; }
+    width: 60px;
+    text-align: center; }
   table.peer_list .percentCol {
     width: 40px;
     padding-right: 5px;
