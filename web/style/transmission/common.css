@@ -639,7 +639,7 @@ table.peer_list {
   table.peer_list .downCol {
     width: 60px; }
   table.peer_list .percentCol {
-    width: 35px;
+    width: 40px;
     padding-right: 5px;
     text-align: right; }
   table.peer_list .statusCol {
