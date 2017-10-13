@@ -371,7 +371,7 @@ div#torrent_inspector {
   padding: 15px;
   top: 68px;
   position: fixed;
-  width: 60%;
+  width: 480px;
   z-index: 5;
   border-left: 1px solid #888;
   bottom: 22px;
@@ -801,7 +801,7 @@ div.torrent_footer {
   bottom: 0;
   position: fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 5;
   background-color: #cccccc;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#bbbbbb));
   background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
