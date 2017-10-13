@@ -7,14 +7,14 @@
 
 Transmission.fmt = (function()
 {
-	var speed_K = 1000;
+	var speed_K = 1024;
 	var speed_B_str =  'B/s';
 	var speed_K_str = 'kB/s';
 	var speed_M_str = 'MB/s';
 	var speed_G_str = 'GB/s';
 	var speed_T_str = 'TB/s';
 
-	var size_K = 1000;
+	var size_K = 1024;
 	var size_B_str =  'B';
 	var size_K_str = 'kB';
 	var size_M_str = 'MB';
