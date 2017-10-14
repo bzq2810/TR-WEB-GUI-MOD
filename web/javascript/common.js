@@ -125,7 +125,8 @@ Math.ratio = function(numerator, denominator) {
  * Round a string of a number to a specified number of decimal places
  */
 Number.prototype.toTruncFixed = function(place) {
-	var ret = Math.floor(this * Math.pow (10, place)) / Math.pow(10, place);
+	// var ret = Math.floor(this * Math.pow (10, place)) / Math.pow(10, place);
+    var ret = this;
 	return ret.toFixed(place);
 }
 
