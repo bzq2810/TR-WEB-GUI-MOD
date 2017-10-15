@@ -509,7 +509,7 @@ Transmission.prototype =
 			this.hideMobileAddressbar();
 		}
 	},
-    
+
 	updateSelectedClicked: function(ev) {
 		if (this.isButtonEnabled(ev)) {
 			this.reannounceSelectedTorrents();
@@ -782,7 +782,7 @@ Transmission.prototype =
 	onMenuSortClicked: function(event, ui)
 	{
 	    var dir, id = ui.id, element = ui.target;
-		
+
 		if (ui.group == 'sort-mode')
 		{
 		    element.selectMenuItem();
@@ -803,11 +803,11 @@ Transmission.prototype =
 				}
 				this.setSortDirection(dir);
 				break;
-				
+
 			default:
 				console.log('unhandled: ' + id);
 				break;
-				
+
 		}
 	},
 
@@ -1444,7 +1444,7 @@ Transmission.prototype =
 		if (isMobileDevice) {
 			$('body').toggleClass('inspector_showing',visible);
 		} else {
-			var w = visible ? $('#torrent_inspector').outerWidth() + 1 + 'px' : '0px';
+			var w = visible ? $('#torrent_inspector').outerWidth() + 'px' : '0px';
 			$('#torrent_container')[0].style.right = w;
 		}
 	},
